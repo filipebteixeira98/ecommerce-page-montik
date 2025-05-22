@@ -32,7 +32,8 @@ export function FreightForm({
           />
           <button
             type="submit"
-            className="bg-blue-300 p-2 rounded text-base text-white"
+            className="bg-blue-500 hover:bg-blue-400 transition p-2 rounded text-base text-white disabled:bg-gray-200"
+            disabled={!cep}
           >
             Calcular
           </button>
