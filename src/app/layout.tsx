@@ -10,8 +10,8 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'E-commerce Montik',
-  description: 'Crie sua loja de camiseta personalizada sem estoque',
+  title: 'Free Market',
+  description: 'Encontre tudo o que você procura',
 }
 
 export default function RootLayout({
