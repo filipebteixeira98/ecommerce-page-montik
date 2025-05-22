@@ -6,11 +6,15 @@ const config: Config = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  globals: {
+    'ts-jest': {
+      tsconfig: 'tsconfig.jest.json',
+    },
+  },
 }
 
 export default config
