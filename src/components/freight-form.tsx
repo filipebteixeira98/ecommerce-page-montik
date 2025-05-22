@@ -2,6 +2,8 @@ import type { FormEvent } from 'react'
 
 import type { AddressProps } from '@/app/page'
 
+import { sanitizeAndValidateCep } from '@/utils/sanitize-and-validate-cep'
+
 interface FreightFormProps {
   handleCepSearch(event: FormEvent<HTMLFormElement>): Promise<void>
   cep: string
@@ -26,7 +28,9 @@ export function FreightForm({
             type="text"
             maxLength={8}
             value={cep}
-            onChange={(event) => setCep(event.target.value)}
+            onChange={(event) =>
+              setCep(sanitizeAndValidateCep(event.target.value))
+            }
             placeholder="Digite o CEP"
             className="border p-2 rounded w-full"
           />
