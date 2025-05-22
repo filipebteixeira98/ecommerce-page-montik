@@ -1,9 +1,14 @@
+import { motion } from 'framer-motion'
 import { ShieldCheck, Truck, RefreshCcw } from 'lucide-react'
 
 export function ProductAction() {
   return (
-    <div className="flex flex-col p-8 border-b border-gray-300">
-      <span className="text-green-600 text-3xl font-light mb-3">R$ 79,90</span>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="flex flex-col p-8 border-b border-gray-300"
+    >
       <p className="text-sm text-gray-600 mb-6">em 12x de R$ 6,66 sem juros</p>
       <button className="bg-blue-600 text-white text-base font-medium py-3 px-6 rounded hover:bg-blue-700 transition mb-3">
         Comprar agora
@@ -25,6 +30,6 @@ export function ProductAction() {
           Compra garantida pelo Mercado Pago
         </li>
       </ul>
-    </div>
+    </motion.div>
   )
 }
