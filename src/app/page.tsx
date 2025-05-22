@@ -9,6 +9,7 @@ import { Footer } from '@/components/footer'
 import { api } from '@/services/api'
 
 import { variants, productImages } from '@/utils/data'
+import { Header } from '@/components/header'
 export interface AddressProps {
   logradouro: string
   complemento: string
@@ -111,6 +112,7 @@ export default function ProductPage() {
 
   return (
     <>
+      <Header />
       <main className="max-w-5xl mx-auto h-screen place-items-center p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
         <section>
           <Image
